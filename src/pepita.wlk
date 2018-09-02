@@ -25,3 +25,5 @@ object pepita {
 		self.posicion(nuevaPosicion)
 	}	
 }
+
+

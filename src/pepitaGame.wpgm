@@ -17,31 +17,20 @@ program PepitaGame {
 	game.addVisualIn(manzana, game.at(5,1))
 	game.addVisual(buenosAires)
 	game.addVisual(villaGesell)
-	game.addVisualIn(pepita, game.at(5,7)) //edit
+	game.addVisual(pepita) //edit
 	game.addVisualCharacter(roque) // edit
 	//game.addVisualCharacter(pepita)
 
 //	TECLADO
 	keyboard.v().onPressDo { pepita.volaHacia(villaGesell) }
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
-		
+	
+// COLISIONES
+	game.whenCollideDo( roque, {otroObjeto => otroObjeto.teEncontro(roque)  } )
+	
 //	START
 	game.start()
 
-// COLISIONES
-	game.whenCollideDo (roque, {manzana => manzana.teEncontro(roque)
-								game.removeVisual(manzana)
-	})
-	
-	game.whenCollideDo (roque, {alpiste => alpiste.teEncontro(roque)
-								game.removeVisual(alpiste)
-	})		
-	
-	//game.whenCollideDo (pepita, {algo => algo.teEncontro(pepita)
-		//pepita.come(algo)
-		//game.removeVisual(algo)
-		//})
 	
 	
-	  
-}
+	 

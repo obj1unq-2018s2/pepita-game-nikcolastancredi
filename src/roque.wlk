@@ -33,6 +33,6 @@ object roque {
 	
 	
 	
-	//- Al encontrar a pepita, Roque le entrega la comida que tiene y pepita se la come.
+
 	
 }

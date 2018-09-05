@@ -26,11 +26,9 @@ program PepitaGame {
 	keyboard.b().onPressDo { pepita.volaHacia(buenosAires) }
 	
 // COLISIONES
-	game.whenCollideDo( roque, {otroObjeto => otroObjeto.teEncontro(roque)  } )
+	game.whenCollideDo( roque , {otroObjeto => otroObjeto.teEncontro(roque)  } )
 	
 //	START
 	game.start()
-
 	
-	
-	 
+}
